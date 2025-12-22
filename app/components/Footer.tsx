@@ -1,9 +1,9 @@
-import React from "react";
+import type React from "react";
 
 type SocialItem = {
   name: string;
   href: string;
-  icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+  icon: (props: React.SVGProps<SVGSVGElement>) => React.ReactElement;
 };
 
 export default function Footer() {
