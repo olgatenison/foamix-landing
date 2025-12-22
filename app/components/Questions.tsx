@@ -1,21 +1,31 @@
 const faqs = [
   {
-    question: "How do you make holy water?",
+    question: "Яка оптимальна товщина ППУ для фасаду?",
     answer:
       "Утепление пенопластом  Утепление минватой  Декоративная штукатурка/покраска  Ремонт/подготовка основания (если делаете)  Для кого: частные дома, многоэтажки/ОСББ, коммерция",
   },
   {
-    question: "What's the best thing about Switzerland?",
+    question: "Чи можна напилювати взимку/в дощ?",
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
   {
-    question: "What do you call someone with no body and no nose?",
+    question: "Який фініш краще для захисту від УФ?",
     answer:
       "Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
   {
-    question: "Why do you never see elephants hiding in trees?",
+    question: "Чи “дихає” фасад після ППУ?",
+    answer:
+      "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "Скільки служить ППУ?",
+    answer:
+      "Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "Чи можна на дерево/цеглу/бетон/метал?",
     answer:
       "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
@@ -28,7 +38,7 @@ export default function Questions() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <h2 className="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-              Услуги / что делаетем
+              FAQ (питання-відповіді)
             </h2>
             <p className="mt-4 text-pretty text-base/7 text-gray-600">
               Утепление пенопластом Утепление минватой Декоративная

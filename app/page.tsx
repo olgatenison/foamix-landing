@@ -1,19 +1,19 @@
 import Hero from "./components/Hero";
-import Why from "./components/Why";
 import Problems from "./components/Problems";
-import Questions from "./components/Questions";
-import Testimonials from "./components/Testimonials";
-import Work from "./components/Work";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Land from "./components/Land";
 
 export default function Home() {
   return (
     <div>
+      <Land />
       <Hero />
-      <Why />
+      {/* <Why /> */}
       <Problems />
-      <Questions />
-      <Testimonials />
-      <Work />
+      <Contact />
+      {/* <Work /> */}
+      <Footer />
     </div>
   );
 }

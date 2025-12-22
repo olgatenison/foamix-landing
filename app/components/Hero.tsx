@@ -115,7 +115,7 @@ export default function Hero() {
         </Dialog>
       </header>
 
-      <div className="relative isolate overflow-hidden pt-14">
+      {/* <div className="relative isolate overflow-hidden pt-14">
         <Image
           alt=""
           width={1920}
@@ -139,7 +139,7 @@ export default function Hero() {
           <div className="mx-auto max-w-2xl py-32 ">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                Announcing our next round of funding.{" "}
+                безшовно, швидко, надовго
                 <a href="#" className="font-semibold text-indigo-600">
                   <span aria-hidden="true" className="absolute inset-0" />
                   Read more <span aria-hidden="true">&rarr;</span>
@@ -151,7 +151,9 @@ export default function Hero() {
                 Утепленння фасадів під ключ у вашому місті
               </h1>
               <p className="mt-8 text-pretty text-lg font-medium text-gray-600 sm:text-xl/8">
-                Подзаголовок: материалы (пенопласт/минвата), гарантия, сроки
+                Рідкі компоненти змішуються та напилюються на поверхню, миттєво
+                розширюються й утворюють щільний теплоізоляційний шар без швів і
+                містків холоду
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
@@ -161,7 +163,7 @@ export default function Hero() {
                   Розрахувати вартість
                 </a>
                 <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                  Зателефонувати <span aria-hidden="true">→</span>
+                  Замовити виїзд майстра<span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
@@ -179,7 +181,7 @@ export default function Hero() {
             className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-288.75"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,7 +1,11 @@
 const stats = [
-  { id: 1, name: "Transactions every 24 hours", value: "Гарантія" },
-  { id: 2, name: "Assets under holding", value: "Безкоштовний виїзд" },
-  { id: 3, name: "New users annually", value: "Працюємо офіційно" },
+  {
+    id: 1,
+    name: "Transactions every 24 hours",
+    value: "Безкоштовна консультація",
+  },
+  { id: 2, name: "Assets under holding", value: "Виїзд на об’єкт" },
+  { id: 3, name: "New users annually", value: "Кошторис у день звернення" },
 ];
 
 export default function Why() {

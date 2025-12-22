@@ -31,11 +31,7 @@ export default function Example() {
                 <use x={86} href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" />
               </svg>
               <blockquote className="text-xl/8 font-semibold text-white sm:text-2xl/9">
-                <p>
-                  “Площадь фасада”, “этажность”, “материал”, “город” На выходе:
-                  “Ориентировочная стоимость” + форма: имя/телефон/мессенджер
-                  (Если калькулятор сложный — делаем квиз 4–6 шагов)
-                </p>
+                <p>3–6 відгуків + фото об’єктів (якщо є).</p>
               </blockquote>
               <figcaption className="mt-8 text-base">
                 <div className="font-semibold text-white">
