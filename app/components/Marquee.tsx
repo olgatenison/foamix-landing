@@ -25,7 +25,7 @@ export default function Marquee() {
           animation: scroll 20s linear infinite;
         }
       `}</style>
-      <div className="marquee overflow-hidden py-3">
+      <div className="marquee overflow-hidden py-2">
         <div className="flex flex-row gap-6 animate-scroll whitespace-nowrap">
           <Items />
           <Items />

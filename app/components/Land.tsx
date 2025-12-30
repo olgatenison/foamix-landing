@@ -42,42 +42,61 @@ import Trust from "./Trust";
 // ];
 const secondaryFeatures = [
   {
-    name: "Безшовний шар — мінімум тепловтрат",
+    name: "Економія на опаленні до 50%",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
+      "ППУ суттєво зменшує тепловтрати будинку. Завдяки високій теплоізоляції витрати на опалення взимку та охолодження влітку помітно знижуються.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "Заповнює щілини й нерівності — не треба “ідеальної” стіни",
+    name: "Безшовне утеплення без містків холоду",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+      "Напилення ППУ створює суцільний теплоізоляційний шар без швів, тріщин і зазорів — мінімум втрат тепла.",
     icon: LockClosedIcon,
   },
   {
-    name: "Висока адгезія — тримається на більшості основ",
+    name: "Швидкий монтаж утеплення ППУ",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
+      "Терміни залежать від площі та складності об’єкта, але зазвичай роботи займають від 1 дня — без демонтажу та «мокрих» процесів.",
     icon: ArrowPathIcon,
   },
   {
-    name: "Швидкий монтаж — мінімум часу на об’єкті",
+    name: "Підходить для різних типів об’єктів",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
+      "Застосовується для будинків і котеджів, дахів та мансард, перекриттів, ангарів і складів, а також промислових і комерційних приміщень.",
     icon: FingerPrintIcon,
   },
   {
-    name: "Гідроізоляційний ефект — додатковий захист від вологи",
+    name: "Довговічність — понад 30 років",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+      "ППУ не просідає, не кришиться та зберігає теплоізоляційні властивості десятиліттями.",
     icon: Cog6ToothIcon,
   },
   {
-    name: "Для складних форм — арки, еркери, нестандартні фасади",
+    name: "Захист від вологи та плісняви",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
+      "Жорсткий пінополіуретан майже не вбирає воду, зменшує ризик конденсату та перешкоджає розвитку грибка.",
+    icon: ServerIcon,
+  },
+  {
+    name: "Додаткова звукоізоляція",
+    description:
+      "Шар ППУ допомагає знизити рівень шуму з вулиці та з сусідніх приміщень.",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Безпечний та екологічний матеріал",
+    description:
+      "Після застигання ППУ не виділяє шкідливих речовин і підходить для використання в житлових приміщеннях.",
+    icon: Cog6ToothIcon,
+  },
+  {
+    name: "Вигідніше за традиційні утеплювачі",
+    description:
+      "Один шар ППУ може замінити кілька шарів мінеральної вати чи пінопласту — менше витрат і стабільніший результат.",
     icon: ServerIcon,
   },
 ];
+
 const stats = [
   { id: 1, name: "Приватні будинки / котеджі", value: "8,000+" },
   { id: 2, name: "Дачі, гаражі, господарські споруди", value: "900m+" },
@@ -338,7 +357,7 @@ export default function Land() {
                 звернення
               </h2>
               <p className="mt-8 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-balance sm:text-5xl">
-                Блок “Чому ППУ — це вигідно”
+                Чому утеплення пінополіуретаном (ППУ) — це вигідно
               </p>
               <p className="mt-6 text-lg/8 text-gray-600 max-w-2xl mx-auto ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div className="overflow-hidden bg-blue-50 mx-4 sm:mx-8 rounded-b-[90px]">
-      <div className="mx-auto max-w-7xl px-6 pb-24 pt-20 lg:flex lg:items-center lg:gap-12 lg:justify-between">
+      <div className="mx-auto max-w-7xl px-6 pb-18 pt-10 lg:flex lg:items-center lg:gap-12 lg:justify-between">
         {/* LEFT */}
         <div className="mx-auto max-w-2xl shrink-0">
           <div className="inline-flex items-center gap-4 pb-10">
@@ -53,7 +53,7 @@ export default function Hero() {
             />
 
             {/* BADGE */}
-            <div className="absolute top-50 -right-3 z-10 text-center px-4 bg-[#00a0e3] rounded-full h-40 w-40 text-white flex flex-col justify-center items-center shadow-lg -translate-y-1/2 translate-x-1/2">
+            <div className="absolute top-50 right-10 z-12 text-center px-4 bg-[#00a0e3] rounded-full h-40 w-40 text-white flex flex-col justify-center items-center shadow-lg -translate-y-1/2 translate-x-1/2">
               <div className="text-base">Ціна від</div>
               <span className="block font-bold text-5xl leading-none">395</span>
               <div className="text-base">грн/м²</div>

@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Land from "./components/Land";
 import First from "./components/First";
 import Marquee from "./components/Marquee";
+import Features from "./components/Features";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Marquee />
 
       <Hero />
+      <Features />
       <Land />
       {/* <Why /> */}
       <Problems />
