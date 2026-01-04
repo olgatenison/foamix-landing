@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="bg-white shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center pt-2 pb-3 px-6">
+      <div className="mx-auto flex max-w-7xl items-center pt-2 pb-3 px-4">
         <Image
           src="/f.svg"
           alt="Foamix"

@@ -21,6 +21,12 @@ export function InsulationComparison() {
   return (
     <section className="w-full">
       <div className="mx-auto max-w-7xl px-4 py-10 ">
+        <div className="pt-12 pb-8">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance text-center max-w-2xl mx-auto">
+            Чому <span className="text-[#00a0e3]">пінополіуретан</span> зберігає
+            тепло краще?
+          </h2>
+        </div>
         <div className="flex justify-center items-end border-b border-gray-200 pb-6">
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 text-balance max-w-[320px] mx-auto">
             Порівняння теплопровідності утеплювачів
@@ -28,7 +34,7 @@ export function InsulationComparison() {
           <p className="mt-8 sm:mt-12 text-balance text-lg font-medium text-gray-500 max-w-xl mx-auto ">
             Низька теплопровідність пінополіуретану робить ППУ одним із
             найефективніших утеплювачів на ринку.{" "}
-            <span className="block mt-4">
+            <span className="block ">
               <span className="font-bold text-gray-900 ">
                 Це довготривале та вигідне рішення
               </span>{" "}

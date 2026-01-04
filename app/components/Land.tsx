@@ -494,18 +494,18 @@ export default function Land() {
         </p>
         <Testimonials />
         <Questions />
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Image
             alt="App screenshot"
             src="/2.jpg"
             width={2432}
             height={1442}
             className=" rounded-xl shadow-2xl ring-1 ring-gray-900/10"
-          />
-          {/* <div aria-hidden="true" className="relative">
+          /> 
+           <div aria-hidden="true" className="relative">
                 <div className="absolute -inset-x-20 bottom-0 bg-linear-to-t from-white pt-[7%]" />
-              </div> */}
-        </div>
+              </div>
+        </div> */}
         <Trust />
         {/* CTA section */}
         <div className="relative isolate mt-16 px-6  lg:px-8">
