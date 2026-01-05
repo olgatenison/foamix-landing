@@ -13,7 +13,7 @@ const items = [
   { mm: 650, name: "Цегла", pb: 0 },
 ];
 
-export function InsulationComparison() {
+export default function InsulationComparison() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   const showBadge = hovered === 25; // только для Пінополіуретан

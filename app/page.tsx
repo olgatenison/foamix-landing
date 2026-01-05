@@ -1,16 +1,17 @@
 import Hero from "./components/Hero";
 import Problems from "./components/Problems";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Land from "./components/Land";
-import First from "./components/First";
+
 import Marquee from "./components/Marquee";
 import Features from "./components/Features";
-import { InsulationComparison } from "./components/InsulationComparison";
+import InsulationComparison from "./components/InsulationComparison";
 import PpuTypes from "./components/PpuTypes";
 import HowToChoosePpu from "./components/HowToChoosePpu";
 import HowWeWork from "./components/HowWeWork";
-import OurApproach from "./components/OurApproach";
+
+import Solving from "./components/Solving";
+import Approach from "./components/Approach";
+import StatsSection from "./components/Stats";
 
 export default function Home() {
   return (
@@ -22,13 +23,11 @@ export default function Home() {
       <HowToChoosePpu />
       <InsulationComparison />
       <HowWeWork />
-      <OurApproach />
-      <Land />
-      {/* <Why /> */}
       <Problems />
+      <StatsSection />
+      <Solving />
+      <Approach />
       <Contact />
-      {/* <Work /> */}
-      <Footer />
     </div>
   );
 }

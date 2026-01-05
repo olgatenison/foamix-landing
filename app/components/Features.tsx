@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   CurrencyDollarIcon,
   Squares2X2Icon,

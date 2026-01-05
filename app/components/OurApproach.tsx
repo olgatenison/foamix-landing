@@ -57,29 +57,11 @@ const approach = [
   },
 ];
 
-const trust = [
-  "прозора ціна",
-  "швидке виконання",
-  "довготривалий ефект",
-  "реальна економія на опаленні",
-];
-
 export default function OurApproachDribbbleStyle() {
   return (
     <section className="mx-4 sm:mx-8 my-10">
       <div className="rounded-[48px] bg-[#f5f2ea] px-6 py-10 sm:px-10 sm:py-14">
         <div className="mx-auto max-w-6xl">
-          {/* pill */}
-          <div className="inline-flex items-center rounded-full border border-black/15 bg-white/40 px-4 py-2">
-            <span className="text-xs font-semibold tracking-wide text-black/70">
-              ПІДХІД
-            </span>
-            <span className="mx-3 h-4 w-px bg-black/15" />
-            <span className="text-xs font-semibold tracking-wide text-[#00a0e3]">
-              ППУ
-            </span>
-          </div>
-
           {/* title */}
           <h2 className="mt-6 text-4xl sm:text-6xl font-black uppercase tracking-tight text-black leading-[0.95]">
             Наш підхід
@@ -142,42 +124,6 @@ export default function OurApproachDribbbleStyle() {
 
           {/* bottom divider */}
           <div className="h-px w-full bg-black/15" />
-
-          {/* trust block (как отдельная строка/блок) */}
-          <div className="grid grid-cols-1 gap-4 py-8 md:grid-cols-[80px_320px_1fr] md:gap-10">
-            <div className="text-sm font-semibold text-black/70">—</div>
-            <div className="text-sm sm:text-base font-extrabold uppercase tracking-wide text-black">
-              Чому нам довіряють
-            </div>
-            <div className="max-w-2xl">
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {trust.map((t) => (
-                  <li key={t} className="flex items-center gap-3">
-                    <span className="h-2 w-2 rounded-full bg-[#00a0e3]" />
-                    <span className="text-sm sm:text-base text-black/70">
-                      {t}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="mt-2 flex flex-wrap items-center gap-4">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-[#00a0e3] px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
-            >
-              Отримати консультацію →
-            </a>
-            <a
-              href="#works"
-              className="text-sm font-semibold text-black underline underline-offset-4 hover:text-black/70"
-            >
-              Наші роботи →
-            </a>
-          </div>
         </div>
       </div>
     </section>

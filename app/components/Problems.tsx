@@ -1,60 +1,97 @@
+const stats = [
+  {
+    id: 1,
+    value: "Прозора ціна",
+    description:
+      "Точний прорахунок і фіксація вартості в договорі — без прихованих витрат.",
+    // линия нормальная (полная)
+    lineTop: "top-2",
+    lineBottom: "bottom-3",
+    valuePos: "row-start-1 self-start",
+    descPos: "row-start-3 self-end", // низ общий
+  },
+  {
+    id: 2,
+    value: "Швидке виконання",
+    description:
+      "Швидко напилюємо ППУ та закриваємо об’єкт у найкоротші терміни (залежно від площі).",
+    // убрать линию в пустом верхе (как зачеркнуто) -> старт ниже
+    lineTop: "top-24 lg:top-28",
+    lineBottom: "bottom-3",
+    valuePos: "row-start-2 self-center", // значение в середине
+    descPos: "row-start-3 self-end", // НИЗ как у первых трех
+  },
+  {
+    id: 3,
+    value: "Довгий ефект",
+    description:
+      "Безшовний шар тримає тепло, не боїться вологи та служить роками без просідання.",
+    lineTop: "top-2",
+    lineBottom: "bottom-3",
+    valuePos: "row-start-1 self-start",
+    descPos: "row-start-3 self-end", // низ общий
+  },
+  {
+    id: 4,
+    value: "Економія тепла",
+    description:
+      "Менше тепловтрат — менші рахунки за опалення та кондиціювання.",
+    // линия между 3 и 4 не должна уходить в самый низ (у тебя там зачеркнуто) -> обрезаем снизу
+    lineTop: "top-2",
+    lineBottom: "bottom-16 lg:bottom-20",
+    valuePos: "row-start-1 self-start",
+    descPos: "row-start-2 self-center", // описание в середине (как у тебя на скрине)
+    showRightLine: false, // убираем правую линию (зачеркнуто справа)
+  },
+];
+
 export default function Problems() {
   return (
-    <div className="bg-white py-24 ">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="mt-20">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            Проблема → решение
-          </h2>
-          <p className="mt-6 text-base/7 text-gray-600">
-            (почему утепление нужно) Коротко: экономия на отоплении, комфорт,
-            защита стен, внешний вид 3–6 карточек с конкретными болями клиентов
-          </p>
+          <h3 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 max-w-xl pl-8">
+            Чому нам довіряють?
+          </h3>
         </div>
-        <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
-          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
-            <p className="flex-none text-3xl font-bold tracking-tight text-gray-900">
-              250k
-            </p>
-            <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-lg font-semibold tracking-tight text-gray-900">
-                Users on the platform
-              </p>
-              <p className="mt-2 text-base/7 text-gray-600">
-                Vel labore deleniti veniam consequuntur sunt nobis.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
-            <p className="flex-none text-3xl font-bold tracking-tight text-white">
-              $8.9 billion
-            </p>
-            <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-lg font-semibold tracking-tight text-white">
-                We’re proud that our customers have made over $8 billion in
-                total revenue.
-              </p>
-              <p className="mt-2 text-base/7 text-gray-400">
-                Eu duis porta aliquam ornare. Elementum eget magna egestas.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-indigo-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
-            <p className="flex-none text-3xl font-bold tracking-tight text-white">
-              401,093
-            </p>
-            <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-lg font-semibold tracking-tight text-white">
-                Transactions this year
-              </p>
-              <p className="mt-2 text-base/7 text-indigo-200">
-                Eu duis porta aliquam ornare. Elementum eget magna egestas. Eu
-                duis porta aliquam ornare.
-              </p>
-            </div>
-          </div>
+
+        <div className="mt-20">
+          <dl className="grid grid-cols-1 lg:grid-cols-4">
+            {stats.map((stat, idx) => (
+              <div key={stat.id} className="relative px-6 lg:px-10">
+                {/* левая вертикальная линия (настраиваемая) */}
+                <span
+                  aria-hidden="true"
+                  className={`absolute left-3 w-px bg-gray-300 ${stat.lineTop} ${stat.lineBottom}`}
+                />
+
+                {/* правая линия (если нужна) */}
+                {idx === stats.length - 1 && stat.showRightLine !== false && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute right-4 top-2 bottom-3 w-px bg-gray-300"
+                  />
+                )}
+
+                {/* ВАЖНО: одинаковая высота блоков + 3 строки */}
+                <div className="grid min-h-65  grid-rows-[auto_40px_auto] lg:grid-rows-[auto_20px_auto] gap-y-2">
+                  <dd
+                    className={`text-3xl font-semibold tracking-tight text-gray-900 leading-none ${stat.valuePos}`}
+                  >
+                    {stat.value}
+                  </dd>
+
+                  <p
+                    className={`text-sm leading-6 text-gray-700 max-w-60 ${stat.descPos}`}
+                  >
+                    {stat.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
