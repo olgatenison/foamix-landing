@@ -321,12 +321,6 @@ export default function HowWeWorkPinterest() {
   const stepRefs = useRef<(HTMLLIElement | null)[]>([]);
   const badgeRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Initialize arrays with correct length
-  useEffect(() => {
-    stepRefs.current = new Array(steps.length).fill(null);
-    badgeRefs.current = new Array(steps.length).fill(null);
-  }, []);
-
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const [lineTop, setLineTop] = useState(0);
