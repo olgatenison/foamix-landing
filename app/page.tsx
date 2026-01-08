@@ -1,5 +1,5 @@
 import Hero from "./components/Hero";
-import Problems from "./components/Problems";
+
 import Contact from "./components/Contact";
 
 import Marquee from "./components/Marquee";
@@ -23,7 +23,7 @@ export default function Home() {
       <HowToChoosePpu />
       <InsulationComparison />
       <HowWeWork />
-      <Problems />
+
       <StatsSection />
       <Solving />
       <Approach />

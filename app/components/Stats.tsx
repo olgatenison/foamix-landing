@@ -29,8 +29,8 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-6">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
+    <section className="py-6 ">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 border-b border-t border-gray-300">
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           {/* LEFT: 5/12 */}
           <div className="lg:col-span-5">
