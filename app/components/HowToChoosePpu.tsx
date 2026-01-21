@@ -65,7 +65,7 @@ export default function HowToChoosePpu() {
                   Отримати консультацію
                 </a>
               </div>
-
+              {/* description */}
               <p className="mt-8 text-sm text-gray-700 max-w-[320px]">
                 Наші спеціалісти допоможуть підібрати оптимальний тип ППУ для
                 вашого об’єкта.
