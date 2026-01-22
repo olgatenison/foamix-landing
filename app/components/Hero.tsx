@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="overflow-hidden bg-blue-50 mx-4 sm:mx-8 rounded-b-[90px]">
-      <div className="mx-auto max-w-7xl px-6 pb-18 pt-10 lg:flex lg:items-center lg:gap-12 lg:justify-between">
+    <div className=" bg-blue-50 lg:mx-8 lg:rounded-b-[90px]">
+      <div className="mx-auto max-w-7xl px-6 pb-10 md:pb-18 pt-10 lg:flex lg:items-center lg:gap-6 lg:justify-between justify-self-start">
         {/* LEFT */}
-        <div className="mx-auto max-w-2xl shrink-0">
+        <div className="mx-auto max-w-xl shrink-0">
           <div className="inline-flex items-center gap-4 pb-10">
             <Image
               src="/avatar.webp"
@@ -15,7 +15,7 @@ export default function Hero() {
               className="h-6 w-6 rounded-md object-cover"
               priority
             />
-            <span className="text-pretty text-lg font-medium text-gray-500">
+            <span className="text-pretty text-lg font-medium text-gray-500 ">
               Економія на опаленні до 50%
             </span>
           </div>
@@ -42,7 +42,7 @@ export default function Hero() {
 
         {/* RIGHT */}
         <div className="mt-12 lg:mt-0 w-full">
-          <div className="relative mx-auto w-full max-w-130 lg:ml-auto lg:max-w-140">
+          <div className="relative mx-auto w-full lg:max-w-130 lg:ml-auto ">
             <Image
               alt="ППУ утеплення"
               src="/polyurethane.jpg"
@@ -53,7 +53,23 @@ export default function Hero() {
             />
 
             {/* BADGE */}
-            <div className="absolute top-50 right-10 z-12 text-center px-4 bg-[#00a0e3] rounded-full h-40 w-40 text-white flex flex-col justify-center items-center shadow-lg -translate-y-1/2 translate-x-1/2">
+            <div
+              className="
+    absolute
+    top-70 sm:top-0 lg:top-1/2
+    left-1/2 sm:left-120 lg:left-auto
+    right-auto lg:right-10
+    -translate-x-1/2 lg:translate-x-1/2
+    -translate-y-1/2
+    z-12
+    text-center px-4
+    bg-[#00a0e3]
+    rounded-full h-40 w-40
+    text-white
+    flex flex-col justify-center items-center
+    shadow-lg
+  "
+            >
               <div className="text-base">Ціна від</div>
               <span className="block font-bold text-5xl leading-none">395</span>
               <div className="text-base">грн/м²</div>

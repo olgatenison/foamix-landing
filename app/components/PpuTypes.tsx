@@ -190,7 +190,7 @@ function PpuTable<T extends PpuRow>({
 
 export default function PpuTypes() {
   return (
-    <div className="space-y-14 overflow-hidden bg-blue-50 rounded-t-[90px] py-16 mx-6">
+    <div className="space-y-14 overflow-hidden bg-blue-50 lg:rounded-t-[90px] py-16 lg:mx-6">
       <div className="border-b border-gray-200 pb-6 max-w-7xl mx-auto gap-12 px-6">
         <h2 className="text-5xl font-semibold tracking-tight text-gray-900 text-balance max-w-lg">
           Види пінополіуретану

@@ -77,7 +77,7 @@ export default function Features() {
         </h2>
 
         <div className="mx-auto mt-16 max-w-2xl  lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
+          <div className="grid grid-cols-1 gap-x-10 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
             {secondaryFeatures.map((feature) => (
               <div key={feature.name} className="flex items-start gap-x-4">
                 <div className="shrink-0 size-10 rounded-full bg-[#00a0e3] flex items-center justify-center">
