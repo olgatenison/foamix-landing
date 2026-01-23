@@ -71,7 +71,7 @@ export default function Hero() {
   "
             >
               <div className="text-base">Ціна від</div>
-              <span className="block font-bold text-5xl leading-none">395</span>
+              <span className="block font-bold text-5xl leading-none">345</span>
               <div className="text-base">грн/м²</div>
             </div>
           </div>
