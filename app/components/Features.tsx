@@ -71,7 +71,7 @@ export default function Features() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance text-center max-w-2xl mx-auto">
+        <h2 className=" lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance text-center max-w-2xl mx-auto hyphens-auto text-3xl">
           Утеплення пінополіуретаном{" "}
           <span className="text-[#00a0e3]">це вигідно</span>
         </h2>

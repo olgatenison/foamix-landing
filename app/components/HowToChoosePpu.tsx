@@ -32,7 +32,7 @@ export default function HowToChoosePpu() {
 
           {/* RIGHT */}
           <div className="p-3">
-            <h2 className="text-5xl font-semibold tracking-tight text-gray-900 text-balance max-w-lg">
+            <h2 className="lg:text-5xl font-semibold tracking-tight text-gray-900 text-balance max-w-lg hyphens-auto text-3xl">
               Як обрати пінополіуретан для утеплення?
             </h2>
 

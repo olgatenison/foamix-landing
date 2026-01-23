@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div className=" bg-blue-50 lg:mx-8 lg:rounded-b-[90px]">
-      <div className="mx-auto max-w-7xl px-6 pb-10 md:pb-18 pt-10 lg:flex lg:items-center lg:gap-6 lg:justify-between justify-self-start">
+      <div className="mx-auto max-w-7xl px-6 pb-10 md:pb-18 pt-10 lg:flex lg:items-center lg:gap-6 lg:justify-between">
         {/* LEFT */}
         <div className="mx-auto max-w-xl shrink-0">
           <div className="inline-flex items-center gap-4 pb-10">
