@@ -147,7 +147,7 @@ export default function Contact() {
             <div className="mt-10">
               <button
                 type="submit"
-                className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="block w-full rounded-md bg-[#00a0e3] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0c91c9] focus-visible:outline focus-visible:outline-offset-2"
               >
                 Надіслати повідомлення
               </button>
@@ -157,7 +157,7 @@ export default function Contact() {
               Натискаючи «Надіслати», я погоджуюся з умовами{" "}
               <a
                 href="#"
-                className="whitespace-nowrap font-semibold text-indigo-600"
+                className="whitespace-nowrap font-semibold text-[#00a0e3]"
               >
                 політики конфіденційності
               </a>
