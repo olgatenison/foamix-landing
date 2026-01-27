@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="relative isolate bg-white px-6 py-20  lg:px-8">
       {/* <svg
         aria-hidden="true"
         className="absolute inset-0 -z-10 size-full stroke-gray-200 mask-[radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -40,13 +40,13 @@ export default function Contact() {
           Отримайте розрахунок утеплення пінополіуретаном
         </h2>
 
-        <p className="mt-2 text-lg/8 text-gray-600">
+        <p className="mt-5 text-lg/8 text-gray-600">
           Кожен проєкт унікальний. Розкажіть про ваші потреби — і ми
           запропонуємо найкраще рішення з утеплення пінополіуретаном. Залиште
           контакти — уточнимо деталі й зробимо розрахунок.
         </p>
 
-        <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
+        <div className="mt-10 lg:mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
           <form action="#" method="POST" className="lg:flex-auto">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>

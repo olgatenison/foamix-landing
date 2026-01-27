@@ -67,7 +67,7 @@ function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export default function Approach() {
   return (
-    <section id="approach" className="py-20 ">
+    <section id="approach" className="pt-20 ">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
           {/* LEFT COLUMN: title + text + image */}
