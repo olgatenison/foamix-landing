@@ -85,7 +85,10 @@ export default function Footer() {
             </a>
           </div>
           <div className="text-light flex justify-center md:order-1 md:mb-0 mb-6 gap-x-4 ">
-            <a href="#" className="text-white hover:text-[#6ac6ee]">
+            <a
+              href="/privacy-policy"
+              className="text-white hover:text-[#6ac6ee]"
+            >
               Політика конфіденційності
             </a>
           </div>
