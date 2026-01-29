@@ -3,44 +3,12 @@ import Image from "next/image";
 export default function Contact() {
   return (
     <div className="relative isolate bg-white px-6 py-20  lg:px-8">
-      {/* <svg
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 size-full stroke-gray-200 mask-[radial-gradient(100%_100%_at_top_right,white,transparent)]"
-      >
-        <defs>
-          <pattern
-            x="50%"
-            y={-64}
-            id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-            width={200}
-            height={200}
-            patternUnits="userSpaceOnUse"
-          >
-            <path d="M100 200V.5M.5 .5H200" fill="none" />
-          </pattern>
-        </defs>
-
-        <svg x="50%" y={-64} className="overflow-visible fill-gray-50">
-          <path
-            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M299.5 800h201v201h-201Z"
-            strokeWidth={0}
-          />
-        </svg>
-
-        <rect
-          fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
-          width="100%"
-          height="100%"
-          strokeWidth={0}
-        />
-      </svg> */}
-
       <div className="mx-auto max-w-xl lg:max-w-4xl">
-        <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+        <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl max-w-xl text-center mx-auto">
           Отримайте розрахунок утеплення пінополіуретаном
         </h2>
 
-        <p className="mt-5 text-lg/8 text-gray-600">
+        <p className="mt-10 text-lg/8 text-gray-600 text-center mx-auto">
           Кожен проєкт унікальний. Розкажіть про ваші потреби — і ми
           запропонуємо найкраще рішення з утеплення пінополіуретаном. Залиште
           контакти — уточнимо деталі й зробимо розрахунок.
@@ -62,7 +30,7 @@ export default function Contact() {
                     name="first-name"
                     type="text"
                     autoComplete="given-name"
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
                   />
                 </div>
               </div>
@@ -80,7 +48,7 @@ export default function Contact() {
                     name="last-name"
                     type="text"
                     autoComplete="family-name"
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
                   />
                 </div>
               </div>
@@ -100,7 +68,7 @@ export default function Contact() {
                     autoComplete="tel"
                     inputMode="tel"
                     placeholder="+380"
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
                   />
                 </div>
               </div>
@@ -119,7 +87,7 @@ export default function Contact() {
                     type="email"
                     autoComplete="email"
                     placeholder="email@example.com"
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
                   />
                 </div>
               </div>
@@ -137,7 +105,7 @@ export default function Contact() {
                     name="message"
                     rows={4}
                     placeholder="Напишіть, що потрібно утеплити та приблизну площу (якщо знаєте)."
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 backdrop-blur placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
                     defaultValue={""}
                   />
                 </div>
@@ -153,7 +121,7 @@ export default function Contact() {
               </button>
             </div>
 
-            <p className="mt-4 text-sm/6 text-gray-500">
+            <p className="mt-4 text-sm/6 text-gray-500 text-center">
               Натискаючи «Надіслати», я погоджуюся з умовами{" "}
               <a
                 href="#"

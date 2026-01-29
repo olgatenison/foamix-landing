@@ -12,6 +12,7 @@ import HowWeWork from "./components/HowWeWork";
 import Solving from "./components/Solving";
 import Approach from "./components/Approach";
 import StatsSection from "./components/Stats";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <Solving />
       <Approach />
       <Contact />
+      <Footer />
     </div>
   );
 }
