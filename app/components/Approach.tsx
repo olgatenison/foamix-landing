@@ -71,6 +71,7 @@ export default function Approach() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
           {/* LEFT COLUMN: title + text + image */}
+          {/* LEFT COLUMN: title + text + image */}
           <div>
             <div className="max-w-xl">
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 max-w-2xl text-balance">
