@@ -149,7 +149,7 @@ function PpuTable<T extends PpuRow>({
         {/* RIGHT */}
         <div className="w-full lg:flex-1">
           {/* Mobile: cards */}
-          <div className="lg:hidden space-y-4">
+          <div className="md:hidden space-y-4">
             {rows.map((row) => (
               <MobileRowCard key={row.type} row={row} />
             ))}
@@ -160,7 +160,7 @@ function PpuTable<T extends PpuRow>({
           </div>
 
           {/* Desktop: table */}
-          <div className="lg:block flow-root">
+          <div className="md:block flow-root">
             <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
                 <div className="overflow-hidden shadow sm:rounded-lg ring-1 ring-black/5">
@@ -255,8 +255,8 @@ function PpuTable<T extends PpuRow>({
 
 export default function PpuTypes() {
   return (
-    <div className="space-y-14 overflow-hidden bg-blue-50 lg:rounded-t-[90px] py-16 lg:mx-6">
-      <div className="border-b border-gray-200 pb-6 max-w-7xl mx-auto gap-12 px-6">
+    <div className="space-y-14 overflow-hidden bg-blue-50 lg:rounded-t-[90px] md:py-16  py-8 lg:mx-6">
+      <div className="border-b border-gray-200 pb-6 max-w-7xl mx-auto gap-12 px-6 xl:mt-0 mt-12">
         <h2 className="text-5xl font-semibold tracking-tight text-gray-900 text-balance max-w-lg">
           Види пінополіуретану
         </h2>
@@ -271,18 +271,19 @@ export default function PpuTypes() {
           </span>
         </p>
       </div>
+      <div className="flex flex-col gap-y-10">
+        <PpuTable<PpuRow>
+          title="Пінополіуретан для напилення"
+          description="Типи для внутрішнього та зовнішнього утеплення (підбір залежить від задачі та умов)."
+          rows={sprayPpu}
+        />
 
-      <PpuTable<PpuRow>
-        title="Пінополіуретан для напилення"
-        description="Типи для внутрішнього та зовнішнього утеплення (підбір залежить від задачі та умов)."
-        rows={sprayPpu}
-      />
-
-      <PpuTable<PpuRow>
-        title="Пінополіуретан для заливки"
-        description="Ін’єкційні/ливарні системи для заповнення порожнин та форм."
-        rows={pourPpu}
-      />
+        <PpuTable<PpuRow>
+          title="Пінополіуретан для заливки"
+          description="Ін’єкційні/ливарні системи для заповнення порожнин та форм."
+          rows={pourPpu}
+        />
+      </div>
     </div>
   );
 }

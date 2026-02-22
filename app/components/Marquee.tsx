@@ -1,11 +1,11 @@
 export default function Marquee() {
   const Items = () => (
     <>
-      <span>Швидкий монтаж</span>
+      <span>Тепло яке залишається</span>
       <span>•</span>
-      <span>економія на опаленні до 50%</span>
+      <span>Економія на опаленні до 50%</span>
       <span>•</span>
-      <span>гарантія якості</span>
+      <span>Гарантія якості</span>
       <span>•</span>
     </>
   );

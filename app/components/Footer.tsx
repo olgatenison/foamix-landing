@@ -49,7 +49,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 py-12 flex items-center lg:justify-between lg:px-8 lg:flex-row flex-col gap-6 justify-center">
-        <div className="mx-auto">
+        <div className="mx-auto lg:mx-0 text-center lg:text-left">
           <p className="text-white pb-5">Підпишись на нас в соцмережах</p>
           <div className="flex justify-center gap-x-6 md:order-2">
             {" "}
