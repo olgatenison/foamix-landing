@@ -27,7 +27,7 @@ export default function InsulationComparison() {
             тепло краще?
           </h2>
         </div>
-        <div className="flex justify-center items-end border-b border-gray-200 pb-6">
+        <div className="flex justify-center items-end border-b border-gray-200 pb-6 lg:flex-row flex-col gap-10">
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 text-balance max-w-[320px] mx-auto">
             Порівняння теплопровідності утеплювачів
           </h2>
@@ -67,8 +67,8 @@ export default function InsulationComparison() {
                 const nameColor = !isRowHovered
                   ? "text-gray-300"
                   : isFirst
-                  ? "text-[#00a0e3]"
-                  : "text-gray-900";
+                    ? "text-[#00a0e3]"
+                    : "text-gray-900";
 
                 return (
                   <li

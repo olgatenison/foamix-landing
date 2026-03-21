@@ -1,5 +1,3 @@
-import React from "react";
-
 type PpuRow = {
   type: string;
   density: string;
@@ -67,9 +65,9 @@ type BulletsProps = {
 
 function Bullets({ items }: BulletsProps) {
   return (
-    <ul className="list-disc pl-5 space-y-1">
-      {items.map((x) => (
-        <li key={x}>{x}</li>
+    <ul className="list-disc space-y-1 pl-5">
+      {items.map((item) => (
+        <li key={item}>{item}</li>
       ))}
     </ul>
   );
@@ -77,15 +75,16 @@ function Bullets({ items }: BulletsProps) {
 
 function MobileRowCard({ row }: { row: PpuRow }) {
   return (
-    <div className="rounded-xl bg-white shadow ring-1 ring-black/5">
+    <div className="w-full rounded-xl bg-white shadow ring-1 ring-black/5">
       <div className="p-4">
         <div className="flex items-start justify-between gap-4">
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <div className="text-sm font-semibold text-gray-900">
               {row.type}
             </div>
             <div className="mt-1 text-xs text-gray-500">{row.density}</div>
           </div>
+
           <span className="shrink-0 rounded-full bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-200">
             Щільність
           </span>
@@ -115,7 +114,7 @@ function MobileRowCard({ row }: { row: PpuRow }) {
               Примітка
             </div>
             <div className="mt-2 text-sm text-gray-600">
-              {row.note ? row.note : <span className="text-gray-400">—</span>}
+              {row.note ?? <span className="text-gray-400">—</span>}
             </div>
           </div>
         </div>
@@ -136,34 +135,31 @@ function PpuTable<T extends PpuRow>({
   rows,
 }: PpuTableProps<T>) {
   return (
-    <section className="px-6 mx-auto max-w-7xl">
-      <div className="flex flex-col lg:flex-row items-start gap-10">
-        {/* LEFT */}
-        <div className="w-full lg:w-[320px] lg:shrink-0">
-          <h2 className="lg:text-xl uppercase font-semibold text-gray-900  hyphens-auto text-3xl">
+    <section className="mx-auto w-full max-w-7xl px-6">
+      <div className="w-full space-y-6 xl:grid xl:grid-cols-[320px_minmax(0,1fr)] xl:gap-10 xl:space-y-0">
+        <div className="w-full">
+          <h2 className="text-3xl font-semibold uppercase text-gray-900 hyphens-auto lg:text-xl wrap-break-word text-balance">
             {title}
           </h2>
           <p className="mt-2 text-sm text-gray-700">{description}</p>
         </div>
 
-        {/* RIGHT */}
-        <div className="w-full lg:flex-1">
-          {/* Mobile: cards */}
-          <div className="md:hidden space-y-4">
+        <div className="w-full min-w-0">
+          <div className="space-y-4 md:hidden">
             {rows.map((row) => (
               <MobileRowCard key={row.type} row={row} />
             ))}
+
             <div className="text-xs text-gray-500">
               * Щільність вказана орієнтовно і може відрізнятися залежно від
               системи та умов нанесення.
             </div>
           </div>
 
-          {/* Desktop: table */}
-          <div className="md:block flow-root">
+          <div className="hidden md:block">
             <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-                <div className="overflow-hidden shadow sm:rounded-lg ring-1 ring-black/5">
+                <div className="overflow-hidden rounded-lg bg-white shadow ring-1 ring-black/5">
                   <table className="min-w-full table-fixed divide-y divide-gray-300">
                     <colgroup>
                       <col className="w-[22%]" />
@@ -211,26 +207,24 @@ function PpuTable<T extends PpuRow>({
                     <tbody className="divide-y divide-gray-200 bg-white">
                       {rows.map((row) => (
                         <tr key={row.type}>
-                          <td className="py-4 pl-4 pr-3 text-sm font-semibold text-gray-900 sm:pl-6 align-top wrap-break-word">
+                          <td className="wrap-break-word py-4 pl-4 pr-3 align-top text-sm font-semibold text-gray-900 sm:pl-6">
                             {row.type}
                           </td>
 
-                          <td className="px-3 py-4 text-sm text-gray-500 align-top whitespace-nowrap">
+                          <td className="whitespace-nowrap px-3 py-4 align-top text-sm text-gray-500">
                             {row.density}
                           </td>
 
-                          <td className="px-3 py-4 text-sm text-gray-500 align-top wrap-break-word">
+                          <td className="wrap-break-word px-3 py-4 align-top text-sm text-gray-500">
                             <Bullets items={row.usage} />
                           </td>
 
-                          <td className="px-3 py-4 text-sm text-gray-500 align-top wrap-break-word">
+                          <td className="wrap-break-word px-3 py-4 align-top text-sm text-gray-500">
                             <Bullets items={row.benefits} />
                           </td>
 
-                          <td className="px-3 py-4 text-sm text-gray-500 align-top wrap-break-word sm:pr-6">
-                            {row.note ? (
-                              row.note
-                            ) : (
+                          <td className="wrap-break-word px-3 py-4 align-top text-sm text-gray-500 sm:pr-6">
+                            {row.note ?? (
                               <span className="text-gray-400">—</span>
                             )}
                           </td>
@@ -255,12 +249,13 @@ function PpuTable<T extends PpuRow>({
 
 export default function PpuTypes() {
   return (
-    <div className="space-y-14 overflow-hidden bg-blue-50 lg:rounded-t-[90px] md:py-16  py-8 lg:mx-6">
-      <div className="border-b border-gray-200 pb-6 max-w-7xl mx-auto gap-12 px-6 xl:mt-0 mt-12">
-        <h2 className="text-5xl font-semibold tracking-tight text-gray-900 text-balance max-w-lg">
+    <div className="space-y-14 overflow-hidden bg-blue-50 py-8 md:py-16 lg:mx-6 lg:rounded-t-[90px]">
+      <div className="mx-auto mt-12 max-w-7xl border-b border-gray-200 px-6 pb-6 xl:mt-0">
+        <h2 className="max-w-lg text-5xl font-semibold tracking-tight text-gray-900 text-balance wrap-break-word hyphens-auto">
           Види пінополіуретану
         </h2>
-        <p className="mt-8 text-balance text-lg font-medium text-gray-500 font-balance max-w-2xl">
+
+        <p className="mt-8 max-w-2xl text-lg font-medium text-gray-500 text-balance">
           Пінополіуретан — універсальний тепло- та гідроізоляційний матеріал,
           який застосовується для напилення та заливки.
           <span className="block">
@@ -271,14 +266,15 @@ export default function PpuTypes() {
           </span>
         </p>
       </div>
+
       <div className="flex flex-col gap-y-10">
-        <PpuTable<PpuRow>
+        <PpuTable
           title="Пінополіуретан для напилення"
           description="Типи для внутрішнього та зовнішнього утеплення (підбір залежить від задачі та умов)."
           rows={sprayPpu}
         />
 
-        <PpuTable<PpuRow>
+        <PpuTable
           title="Пінополіуретан для заливки"
           description="Ін’єкційні/ливарні системи для заповнення порожнин та форм."
           rows={pourPpu}

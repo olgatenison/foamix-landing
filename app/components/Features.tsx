@@ -69,8 +69,8 @@ const secondaryFeatures = [
 
 export default function Features() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 lg:mx-8 py-20">
+    <section className="bg-white mx-auto max-w-7xl ">
+      <div className=" px-6 lg:mx-8 py-20">
         <h2 className=" lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance text-center max-w-2xl mx-auto  text-3xl">
           Утеплення пінополіуретаном{" "}
           <span className="text-[#00a0e3]">це вигідно</span>

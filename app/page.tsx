@@ -19,11 +19,10 @@ export default function Home() {
       <Marquee />
       <Hero />
       <Features />
-      <PpuTypes />{" "}
-      {/* 
+      <PpuTypes />
       <HowToChoosePpu />
       <InsulationComparison />
-      <HowWeWork />
+      {/*  <HowWeWork />
 
       <StatsSection />
       <Solving />

@@ -15,28 +15,28 @@ const chooseItems: readonly ChooseItem[] = [
 
 export default function HowToChoosePpu() {
   return (
-    <section className="relative mx-6 bg-white">
-      <div className="absolute inset-x-0 top-0 h-1/3 bg-blue-50 rounded-b-[90px]" />
+    <section className="relative mx-0 lg:mx-6 bg-white pb-5 ">
+      <div className="absolute inset-x-0 top-0 h-1/3 bg-blue-50 rounded-b-0 lg:rounded-b-[90px]" />
       <div className="relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto px-6 gap-12 lg:gap-16">
           {/* LEFT */}
-          <div className="relative mx-auto w-full max-w-130 lg:ml-auto lg:max-w-140">
+          <div className="relative mx-auto w-full max-w-140 lg:ml-auto lg:max-w-150">
             <Image
               width={600}
               height={600}
               src="/q.jpg"
               alt="Консультація щодо вибору ППУ"
-              className="w-full h-70 sm:h-90 lg:h-130 object-cover rounded-2xl sm:rounded-4xl lg:rounded-[56px] bg-gray-50 shadow-sm"
+              className="w-full h-70 sm:h-90 lg:h-130 object-cover md:rounded-4xl  rounded-2xl lg:rounded-[56px] bg-gray-50 shadow-sm"
             />
           </div>
 
           {/* RIGHT */}
-          <div className="p-3">
+          <div className="p-3 mx-auto w-full max-w-140 ">
             <h2 className="lg:text-5xl font-semibold tracking-tight text-gray-900 text-balance max-w-lg hyphens-auto text-3xl">
               Як обрати пінополіуретан для утеплення?
             </h2>
 
-            <p className="mt-8 text-base text-gray-700 max-w-xl">
+            <p className="mt-2 md:mt-8 text-base text-gray-700 max-w-xl">
               Вибір типу пінополіуретану залежить від:
             </p>
 
@@ -56,8 +56,8 @@ export default function HowToChoosePpu() {
               ))}
             </ul>
 
-            <div className="flex gap-8 items-center">
-              <div className="mt-10 flex items-center gap-x-6">
+            <div className="mt-10 flex gap-3 items-center flex-wrap">
+              <div className="flex items-center ">
                 <a
                   href="#"
                   className="bg-[#00a0e3] px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-[#028fcc] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3] uppercase rounded-full shrink-0"
@@ -66,7 +66,7 @@ export default function HowToChoosePpu() {
                 </a>
               </div>
               {/* description */}
-              <p className="mt-8 text-sm text-gray-700 max-w-[320px]">
+              <p className="text-sm text-gray-700 max-w-[320px]">
                 Наші спеціалісти допоможуть підібрати оптимальний тип ППУ для
                 вашого об’єкта.
               </p>
