@@ -380,7 +380,7 @@ export default function HowWeWorkPinterest() {
       <div className="px-6 py-12 sm:px-10 sm:py-14">
         <div className="mx-auto max-w-4xl">
           <div className="">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance text-center max-w-2xl mx-auto">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance text-center max-w-2xl mx-auto ">
               Як ми працюємо?
             </h2>
           </div>

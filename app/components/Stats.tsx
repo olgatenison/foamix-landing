@@ -34,7 +34,7 @@ export default function StatsSection() {
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           {/* LEFT: 5/12 */}
           <div className="lg:col-span-5">
-            <h3 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900">
+            <h3 className="md:ml-0 ml-3 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900">
               Чому нам довіряють?
             </h3>
           </div>

@@ -237,16 +237,16 @@ export default function Contact() {
               priority
             />
 
-            <figure className="mt-10">
-              <blockquote className="text-lg/8 font-semibold text-gray-900">
+            <div className="mt-10">
+              <div className="text-lg/8 font-semibold text-gray-900">
                 <p>
-                  “Хочете тепло без переплат? Залиште заявку — підкажемо
+                  Хочете тепло без переплат? Залиште заявку — підкажемо
                   найкращий варіант утеплення ППУ і порахуємо під ваші задачі.
-                  Швидкий зворотний зв’язок у робочий час.”
+                  Швидкий зворотний зв’язок у робочий час.
                 </p>
-              </blockquote>
+              </div>
 
-              <figcaption className="mt-10 flex gap-x-6">
+              {/* <figcaption className="mt-10 flex gap-x-6">
                 <Image
                   width={96}
                   height={96}
@@ -262,8 +262,8 @@ export default function Contact() {
                     директорка Foamix
                   </div>
                 </div>
-              </figcaption>
-            </figure>
+              </figcaption> */}
+            </div>
           </div>
         </div>
       </div>

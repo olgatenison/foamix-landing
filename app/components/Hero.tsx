@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-4 pb-10">
             <Image
               src="/avatar.webp"
-              alt="Логотип"
+              alt="Логотип foamix"
               width={24}
               height={24}
               className="h-6 w-6 rounded-md object-cover"

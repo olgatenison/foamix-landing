@@ -22,12 +22,11 @@ export default function Home() {
       <PpuTypes />
       <HowToChoosePpu />
       <InsulationComparison />
-      {/*  <HowWeWork />
-
+      <HowWeWork />
       <StatsSection />
       <Solving />
       <Approach />
-      <Contact /> */}
+      <Contact />
     </div>
   );
 }
