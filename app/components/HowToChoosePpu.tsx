@@ -59,7 +59,7 @@ export default function HowToChoosePpu() {
             <div className="mt-10 flex gap-3 items-center flex-wrap">
               <div className="flex items-center ">
                 <a
-                  href="#"
+                  href="#contact"
                   className="bg-[#00a0e3] px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-[#028fcc] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3] uppercase rounded-full shrink-0"
                 >
                   Отримати консультацію

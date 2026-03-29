@@ -32,10 +32,10 @@ export default function Hero() {
 
           <div className="mt-10 flex items-center gap-x-6">
             <a
-              href="#"
+              href="#contact"
               className="bg-[#00a0e3] px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-[#028fcc] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3] uppercase rounded-full"
             >
-              замовити прорахунок
+              Отримати прорахунок
             </a>
           </div>
         </div>

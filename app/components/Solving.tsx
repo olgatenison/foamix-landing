@@ -151,7 +151,7 @@ export default function Solving() {
 
             <p className="mt-6 max-w-sm text-base leading-6 text-gray-500">
               Розрахуємо вартість і підберемо оптимальну товщину ППУ під ваш
-              об'єкт.
+              об&apos;єкт.
             </p>
           </article>
         </div>
@@ -217,7 +217,7 @@ export default function Solving() {
               </h3>
 
               <a
-                href="#consultation"
+                href="#contact"
                 className="mt-6 inline-flex items-center justify-center rounded-full bg-[#00a0e3] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
               >
                 Отримати розрахунок
@@ -225,7 +225,7 @@ export default function Solving() {
 
               <p className="mt-6 max-w-sm text-base leading-6 text-gray-500">
                 Розрахуємо вартість і підберемо оптимальну товщину ППУ під ваш
-                об'єкт.
+                об&apos;єкт.
               </p>
             </article>
           </div>

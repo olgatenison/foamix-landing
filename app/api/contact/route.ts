@@ -1,3 +1,4 @@
+// app\api\contact\route.ts
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
@@ -12,7 +13,6 @@ const ContactSchema = z.object({
     .regex(/^[0-9+()\-\s]+$/, "Некоректний формат телефону"),
   email: z.string().email("Некоректна електронна пошта"),
   message: z.string().min(10, "Повідомлення має бути мінімум 10 символів"),
-  // защита от спама (honeypot)
   website: z.string().optional().default(""),
 });
 
@@ -21,7 +21,6 @@ export async function POST(req: Request) {
     const json = await req.json();
     const data = ContactSchema.parse(json);
 
-    // honeypot: если заполнено — бот
     if (data.website && data.website.trim().length > 0) {
       return NextResponse.json({ ok: true });
     }
@@ -33,6 +32,8 @@ export async function POST(req: Request) {
       SMTP_PASS,
       CONTACT_TO_EMAIL,
       CONTACT_FROM_EMAIL,
+      COMPANY_SITE_URL,
+      COMPANY_PHONE,
     } = process.env;
 
     if (
@@ -52,16 +53,18 @@ export async function POST(req: Request) {
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
       port: Number(SMTP_PORT),
-      secure: Number(SMTP_PORT) === 465, // true для 465, иначе false
+      secure: Number(SMTP_PORT) === 465,
       auth: {
         user: SMTP_USER,
         pass: SMTP_PASS,
       },
     });
 
-    const subject = `Foamix: нова заявка з сайту (${data.firstName} ${data.lastName})`;
+    await transporter.verify();
 
-    const text = [
+    const adminSubject = `Foamix: нова заявка з сайту (${data.firstName} ${data.lastName})`;
+
+    const adminText = [
       `Ім'я: ${data.firstName}`,
       `Прізвище: ${data.lastName}`,
       `Телефон: ${data.phone}`,
@@ -71,7 +74,7 @@ export async function POST(req: Request) {
       data.message,
     ].join("\n");
 
-    const html = `
+    const adminHtml = `
       <h2>Нова заявка з сайту Foamix</h2>
       <ul>
         <li><b>Ім'я:</b> ${escapeHtml(data.firstName)}</li>
@@ -80,30 +83,78 @@ export async function POST(req: Request) {
         <li><b>Email:</b> ${escapeHtml(data.email)}</li>
       </ul>
       <p><b>Повідомлення:</b></p>
-      <p style="white-space:pre-wrap">${escapeHtml(data.message)}</p>
+      <p style="white-space: pre-wrap;">${escapeHtml(data.message)}</p>
     `;
 
     await transporter.sendMail({
-      from: CONTACT_FROM_EMAIL, // например "Foamix <no-reply@foamix.com>"
-      to: CONTACT_TO_EMAIL, // куда получать заявки
-      replyTo: data.email, // чтобы можно было "ответить" клиенту
-      subject,
-      text,
-      html,
+      from: CONTACT_FROM_EMAIL,
+      to: CONTACT_TO_EMAIL,
+      replyTo: data.email,
+      subject: adminSubject,
+      text: adminText,
+      html: adminHtml,
+    });
+
+    const siteUrl = COMPANY_SITE_URL || "foamix.com.ua";
+    const companyPhone = COMPANY_PHONE || "+380770120077";
+
+    const userSubject = "Foamix — вашу заявку отримано";
+
+    const userText = [
+      `Вітаємо, ${data.firstName}!`,
+      ``,
+      `Дякуємо, ви надіслали заявку до Foamix.`,
+      `Ми отримали ваше повідомлення та зв'яжемося з вами найближчим часом.`,
+      ``,
+      `Наш сайт: ${siteUrl}`,
+      `Телефон: ${companyPhone}`,
+      ``,
+      `Якщо ваше питання термінове, можете зателефонувати нам напряму.`,
+      ``,
+      `З повагою,`,
+      `Команда Foamix`,
+    ].join("\n");
+
+    const userHtml = `
+      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111827;">
+        <h2 style="margin-bottom: 16px;">Вітаємо, ${escapeHtml(data.firstName)}!</h2>
+        <p>Дякуємо, ви надіслали заявку до <b>Foamix</b>.</p>
+        <p>Ми отримали ваше повідомлення та зв'яжемося з вами <b>найближчим часом</b>.</p>
+        <p>
+          <b>Сайт:</b> <a href="${escapeHtml(siteUrl)}">${escapeHtml(siteUrl)}</a><br />
+          <b>Телефон:</b> <a href="tel:${escapeHtml(companyPhone)}">${escapeHtml(companyPhone)}</a>
+        </p>
+        <p>Якщо ваше питання термінове, можете зателефонувати нам напряму.</p>
+        <p style="margin-top: 24px;">
+          З повагою,<br />
+          <b>Команда Foamix</b>
+        </p>
+      </div>
+    `;
+
+    await transporter.sendMail({
+      from: CONTACT_FROM_EMAIL,
+      to: data.email,
+      subject: userSubject,
+      text: userText,
+      html: userHtml,
     });
 
     return NextResponse.json({ ok: true });
   } catch (err) {
+    console.error("CONTACT_API_ERROR", err);
+
     if (err instanceof z.ZodError) {
       return NextResponse.json(
         { ok: false, error: "Validation error", issues: err.issues },
         { status: 400 },
       );
     }
-    return NextResponse.json(
-      { ok: false, error: "Mail send error" },
-      { status: 500 },
-    );
+
+    const message =
+      err instanceof Error ? err.message : "Unknown mail send error";
+
+    return NextResponse.json({ ok: false, error: message }, { status: 500 });
   }
 }
 

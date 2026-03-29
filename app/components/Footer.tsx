@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 type IconProps = React.SVGProps<SVGSVGElement>;
 
@@ -29,35 +30,38 @@ const navigation = [
       </svg>
     ),
   },
-
-  {
-    name: "YouTube",
-    href: "#",
-    icon: (props: IconProps) => (
-      <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-        <path
-          fillRule="evenodd"
-          d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
-          clipRule="evenodd"
-        />
-      </svg>
-    ),
-  },
+  // {
+  //   name: "YouTube",
+  //   href: "#",
+  //   icon: (props: IconProps) => (
+  //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+  //       <path
+  //         fillRule="evenodd"
+  //         d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+  //         clipRule="evenodd"
+  //       />
+  //     </svg>
+  //   ),
+  // },
 ];
+
+const linkClass =
+  "text-white/80 transition-colors duration-200 hover:text-[#6ac6ee]";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900">
-      <div className="mx-auto max-w-7xl px-6 py-12 flex items-center lg:justify-between lg:px-8 lg:flex-row flex-col gap-6 justify-center">
-        <div className="mx-auto lg:mx-0 text-center lg:text-left">
-          <p className="text-white pb-5">Підпишись на нас в соцмережах</p>
-          <div className="flex justify-center gap-x-6 md:order-2">
-            {" "}
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-6 py-12 text-center lg:flex-row lg:items-start lg:justify-between lg:text-left lg:px-8">
+        <div>
+          <p className="pb-5 text-white">Підпишись на нас в соцмережах</p>
+          <div className="flex justify-center gap-x-6 lg:justify-start">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-white hover:text-[#6ac6ee]"
+                className={linkClass}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="size-6" />
@@ -65,33 +69,38 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-center lg:justify-end lg:items-end items-center gap-3">
-          <div className="text-light flex justify-center md:order-1 md:mb-0 mb-6 gap-x-4 flex-wrap">
-            <p className=" text-white">
-              &copy; 2025 Foamix, Всі права захищені.
-            </p>{" "}
+
+        <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+            <p className="text-white/80">© 2025 Foamix, Всі права захищені.</p>
             <a
               href="https://dvi.digital"
               target="_blank"
               rel="noopener noreferrer"
-              className="
- whitespace-nowrap 
-    text-[#6ac6ee] 
-    hover:text-white 
-  "
+              className={linkClass}
             >
-              {" "}
               Дизайн та розробка Dvi
             </a>
           </div>
-          <div className="text-light flex justify-center md:order-1 md:mb-0 mb-6 gap-x-4 ">
-            <a
-              href="/privacy-policy"
-              className="text-white hover:text-[#6ac6ee]"
-            >
+
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+            <Link href="/privacy-policy" className={linkClass}>
               Політика конфіденційності
-            </a>
+            </Link>
+            <Link href="/cookies" className={linkClass}>
+              Політика використання cookie
+            </Link>
           </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-3 lg:items-end">
+          <a href="mailto:Foamix2025@gmail.com" className={linkClass}>
+            Foamix2025@gmail.com
+          </a>
+
+          <a href="tel:+380770120077" className={linkClass}>
+            +38 077 012 0077
+          </a>
         </div>
       </div>
     </footer>

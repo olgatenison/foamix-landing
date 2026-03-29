@@ -1,17 +1,15 @@
 import Hero from "./components/Hero";
-
-import Contact from "./components/Contact";
-
 import Marquee from "./components/Marquee";
 import Features from "./components/Features";
-import InsulationComparison from "./components/InsulationComparison";
 import PpuTypes from "./components/PpuTypes";
 import HowToChoosePpu from "./components/HowToChoosePpu";
+import InsulationComparison from "./components/InsulationComparison";
 import HowWeWork from "./components/HowWeWork";
-
+import StatsSection from "./components/Stats";
 import Solving from "./components/Solving";
 import Approach from "./components/Approach";
-import StatsSection from "./components/Stats";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -26,6 +24,7 @@ export default function Home() {
       <StatsSection />
       <Solving />
       <Approach />
+      <FAQ />
       <Contact />
     </div>
   );
