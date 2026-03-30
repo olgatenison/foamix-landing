@@ -22,9 +22,9 @@ export default function Header() {
           aria-label="Зателефонувати до Foamix"
         >
           <span className="text-xs font-medium uppercase tracking-wide text-[#00a0e3]">
-            Зателефонуй
+            Зателефонуйте
           </span>
-          <span className="text-xl font-semibold text-gray-900">
+          <span className="text-base md:text-xl font-semibold text-gray-900">
             +38 077 012 0077
           </span>
         </a>

@@ -59,7 +59,7 @@ const approach = [
 
 export default function OurApproachDribbbleStyle() {
   return (
-    <section className="mx-4 sm:mx-8 my-10">
+    <section className="mx-4 sm:mx-8 my-3 md:my-10">
       <div className="rounded-[48px] bg-[#f5f2ea] px-6 py-10 sm:px-10 sm:py-14">
         <div className="mx-auto max-w-6xl">
           {/* title */}
@@ -99,7 +99,7 @@ export default function OurApproachDribbbleStyle() {
                   </div>
 
                   {/* content */}
-                  <div className="max-w-2xl">
+                  <div className="max-w-full md:max-w-2xl">
                     {item.desc ? (
                       <p className="text-sm sm:text-base text-black/70 leading-relaxed">
                         {item.desc}

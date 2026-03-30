@@ -6,7 +6,7 @@ type IconProps = React.SVGProps<SVGSVGElement>;
 const navigation = [
   {
     name: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/foamix.ua",
     icon: (props: IconProps) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -19,7 +19,7 @@ const navigation = [
   },
   {
     name: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/foamix.ua/",
     icon: (props: IconProps) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path

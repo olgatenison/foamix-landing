@@ -114,7 +114,7 @@ export default function Solving() {
   const [featured, ...rest] = posts;
 
   return (
-    <section className="py-20">
+    <section className="py-10 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* header */}
         <div className="mx-auto max-w-2xl text-center">
@@ -149,7 +149,7 @@ export default function Solving() {
               Отримати розрахунок
             </a>
 
-            <p className="mt-6 max-w-sm text-base leading-6 text-gray-500">
+            <p className="mt-6 max-w-full md:max-w-sm text-base leading-6 text-gray-500">
               Розрахуємо вартість і підберемо оптимальну товщину ППУ під ваш
               об&apos;єкт.
             </p>

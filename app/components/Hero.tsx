@@ -20,7 +20,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance">
+          <h1 className="text-2xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance">
             Енергоефективне утеплення пінополіуретаном
           </h1>
 
