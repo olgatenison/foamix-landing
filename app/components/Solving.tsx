@@ -137,9 +137,9 @@ export default function Solving() {
           {/* CTA */}
           <article className="relative flex h-full flex-col items-end justify-end px-2 py-6 text-right">
             <h3 className="text-2xl font-semibold tracking-tight text-gray-900">
-              Готові утеплити будинок
+              <span>Готові утеплити будинок</span>{" "}
               <br className="hidden sm:block" />
-              без зайвих витрат?
+              <span>без зайвих витрат?</span>
             </h3>
 
             <a
