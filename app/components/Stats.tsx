@@ -29,21 +29,19 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-6 ">
+    <section className="py-6">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 border-b border-t border-gray-300">
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
-          {/* LEFT: 5/12 */}
           <div className="lg:col-span-5">
             <h3 className="md:ml-0 ml-3 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900">
               Чому нам довіряють?
             </h3>
           </div>
 
-          {/* RIGHT: 7/12 (шире) */}
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-10 text-gray-900 sm:grid-cols-2 sm:gap-y-16 lg:col-span-7">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 text-gray-900 sm:grid-cols-2 sm:gap-y-16 lg:col-span-7">
             {stats.map((stat) => (
-              <div key={stat.id} className="flex flex-col gap-y-3  pl-6">
-                <dd className="order-first flex items-center gap-3 text-3xl font-semibold tracking-tight">
+              <div key={stat.id} className="flex flex-col gap-y-3 pl-6">
+                <div className="order-first flex items-center gap-3 text-3xl font-semibold tracking-tight">
                   <Image
                     src="/avatar.webp"
                     alt="Логотип"
@@ -53,12 +51,14 @@ export default function StatsSection() {
                     priority
                   />
                   <span>{stat.value}</span>
-                </dd>
+                </div>
 
-                <dt className="text-sm/6 text-gray-600">{stat.description}</dt>
+                <div className="text-sm/6 text-gray-600">
+                  {stat.description}
+                </div>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </section>
