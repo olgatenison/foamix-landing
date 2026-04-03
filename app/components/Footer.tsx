@@ -99,7 +99,7 @@ export default function Footer() {
           </a>
 
           <a href="tel:+380770120077" className={linkClass}>
-            +38 077 012 0077
+            +38 077 0120 077
           </a>
         </div>
       </div>

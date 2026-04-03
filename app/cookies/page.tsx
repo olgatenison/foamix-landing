@@ -32,9 +32,7 @@ export default function CookiesPage() {
           2. Які cookie ми використовуємо
         </h2>
         <div className="mt-3 space-y-4 text-gray-700">
-          <p>
-            На сайті Foamix можуть використовуватися такі категорії cookie:
-          </p>
+          <p>На сайті Foamix можуть використовуватися такі категорії cookie:</p>
 
           <ul className="list-disc space-y-2 pl-6">
             <li>
@@ -80,10 +78,10 @@ export default function CookiesPage() {
         </h2>
         <div className="mt-3 space-y-4 text-gray-700">
           <p>
-            Наразі сайт може працювати без аналітичних cookie. Якщо в майбутньому
-            ми підключимо Google Analytics або інші подібні інструменти, такі
-            cookie будуть використовуватися лише після вашої згоди через банер
-            cookie.
+            Наразі сайт може працювати без аналітичних cookie. Якщо в
+            майбутньому ми підключимо Google Analytics або інші подібні
+            інструменти, такі cookie будуть використовуватися лише після вашої
+            згоди через банер cookie.
           </p>
         </div>
       </section>
@@ -95,8 +93,9 @@ export default function CookiesPage() {
         <div className="mt-3 space-y-4 text-gray-700">
           <p>
             Ви можете в будь-який момент змінити або видалити cookie у
-            налаштуваннях свого браузера. Також ви можете відхилити необов’язкові
-            cookie через банер cookie, якщо він відображається на сайті.
+            налаштуваннях свого браузера. Також ви можете відхилити
+            необов’язкові cookie через банер cookie, якщо він відображається на
+            сайті.
           </p>
           <p>
             Зверніть увагу: вимкнення необхідних cookie може вплинути на роботу
@@ -144,7 +143,7 @@ export default function CookiesPage() {
               rel="noreferrer"
               className="font-medium underline underline-offset-4 hover:text-[#00a0e3]"
             >
-             foamix.com.ua
+              foamix.com.ua
             </a>
           </p>
           <p>
@@ -162,7 +161,7 @@ export default function CookiesPage() {
               href="tel:+380770120077"
               className="font-medium underline underline-offset-4 hover:text-[#00a0e3]"
             >
-              +38 077 012 0077
+              +38 077 0120 077
             </a>
           </p>
         </div>

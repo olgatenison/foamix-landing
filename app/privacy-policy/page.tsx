@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
     title: "9. Контактна інформація",
     site: "foamix.com.ua",
     email: "Foamix2025@gmail.com",
-    phone: "+38 077 012 0077",
+    phone: "+38 077 0120 077",
   };
 
   return (

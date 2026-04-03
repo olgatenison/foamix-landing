@@ -338,7 +338,7 @@ export default function Contact() {
                         href="tel:+380770120077"
                         className="flex items-center gap-2 text-base font-semibold text-gray-900 transition hover:text-(--blue) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--hover-blue)"
                       >
-                        <span>+38 077 012 0077</span>
+                        <span>+38 077 0120 077</span>
                       </a>
 
                       <a

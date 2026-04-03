@@ -25,7 +25,7 @@ export default function Header() {
             Зателефонуйте
           </span>
           <span className="text-base md:text-xl font-semibold text-gray-900">
-            +38 077 012 0077
+            +38 077 0120 077
           </span>
         </a>
       </div>
