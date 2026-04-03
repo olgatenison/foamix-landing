@@ -101,7 +101,7 @@ export default function Approach() {
 
               {/* floating badge */}
               <div className="pointer-events-none absolute -right-3 top-8 sm:-right-6 sm:top-10">
-                <div className="grid h-32 w-32 place-items-center rounded-full bg-sky-500 text-center shadow-lg ring-1 ring-black/10 sm:h-36 sm:w-36">
+                <div className="grid h-32 w-32 place-items-center rounded-full bg-(--blue) text-center shadow-lg ring-1 ring-black/10 sm:h-36 sm:w-36">
                   <div className="px-4 text-sm font-semibold leading-tight text-white">
                     Безкоштовна
                     <br />
@@ -120,7 +120,7 @@ export default function Approach() {
                 return (
                   <li key={s.title} className=" bg-white p-5  ">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#00a0e3] text-sm font-semibold text-white">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-(--blue) text-sm font-semibold text-white">
                         {number}
                       </div>
 
@@ -132,7 +132,7 @@ export default function Approach() {
                         <ul className=" pt-2 space-y-1 border-gray-300 border-t">
                           {s.bullets.map((b) => (
                             <li key={b} className="flex items-start gap-2">
-                              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-sky-600" />
+                              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-(--blue)" />
                               <span className="text-sm leading-6 text-slate-600">
                                 {b}
                               </span>

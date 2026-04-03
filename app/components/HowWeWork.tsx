@@ -112,11 +112,11 @@ export default function HowWeWorkPinterest() {
           </div>
           <div className="relative mt-10" ref={timelineRef}>
             <div
-              className="pointer-events-none absolute left-5 w-px bg-[#00a0e3]/25 lg:left-1/2 lg:-translate-x-1/2"
+              className="pointer-events-none absolute left-5 w-px bg-(--blue)/25 lg:left-1/2 lg:-translate-x-1/2"
               style={{ top: lineTop, height: lineHeight }}
             />
             <div
-              className="pointer-events-none absolute left-5 w-px bg-[#00a0e3] lg:left-1/2 lg:-translate-x-1/2"
+              className="pointer-events-none absolute left-5 w-px bg-(--blue) lg:left-1/2 lg:-translate-x-1/2"
               style={{ top: lineTop, height: fillHeight }}
             />
 
@@ -177,8 +177,8 @@ export default function HowWeWorkPinterest() {
                           className={[
                             "mt-2 flex h-10 w-10 items-center justify-center rounded-full shadow-sm ring-4 ring-white transition-colors duration-300",
                             isActive
-                              ? "bg-[#00a0e3] text-white"
-                              : "bg-white text-[#00a0e3]",
+                              ? "bg-(--blue) text-white"
+                              : "bg-white text-(--blue)",
                           ].join(" ")}
                           style={
                             !isActive
@@ -252,7 +252,7 @@ export default function HowWeWorkPinterest() {
             <div className="mt-3 flex flex-wrap items-center gap-4">
               <a
                 href="#contact"
-                className="bg-[#00a0e3] px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-[#028fcc] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3] uppercase w-96 rounded-3xl text-center"
+                className="bg-(--blue) px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-(--hover-blue) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue) uppercase w-96 rounded-3xl text-center"
               >
                 замовити прорахунок вашого проекту
               </a>

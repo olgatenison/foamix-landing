@@ -74,7 +74,7 @@ function ProblemCard({
   return (
     <article className="group relative flex h-full flex-col border-b border-gray-300 pb-2">
       <div className="relative w-full overflow-visible">
-        <div className="absolute left-4 -top-4 z-10 rounded-full bg-[#00a0e3] px-4 py-2 text-sm font-medium text-white shadow-md">
+        <div className="absolute left-4 -top-4 z-10 rounded-full bg-(--blue) px-4 py-2 text-sm font-medium text-white shadow-md">
           {post.date}
         </div>
 
@@ -102,7 +102,7 @@ function ProblemCard({
         </h3>
 
         <p className="mt-auto pb-5 pt-4 text-base leading-6 text-gray-500">
-          <span className="font-semibold text-[#00a0e3]">Рішення:</span>{" "}
+          <span className="font-semibold text-(--blue)">Рішення:</span>{" "}
           {post.description}
         </p>
       </div>
@@ -116,7 +116,6 @@ export default function Solving() {
   return (
     <section className="py-10 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="max-w-2xl text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:pl-8 lg:text-6xl">
             Які проблеми вирішує утеплення пінополіуретаном
@@ -126,7 +125,6 @@ export default function Solving() {
           </p>
         </div>
 
-        {/* MOBILE/TABLET: первая карточка как все */}
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:hidden">
           <ProblemCard post={featured} priority />
 
@@ -134,35 +132,33 @@ export default function Solving() {
             <ProblemCard key={post.id} post={post} />
           ))}
 
-          {/* CTA */}
           <article className="relative flex h-full flex-col items-end justify-end px-2 py-6 text-right">
-            <h3 className="text-2xl font-semibold tracking-tight text-gray-900">
+            <p className="text-2xl font-semibold tracking-tight text-gray-900">
               <span>Готові утеплити будинок</span>{" "}
               <br className="hidden sm:block" />
               <span>без зайвих витрат?</span>
-            </h3>
+            </p>
 
             <a
               href="#contact"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-[#00a0e3] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-(--blue) px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
             >
               Отримати розрахунок
             </a>
 
-            <p className="mt-6 max-w-full md:max-w-sm text-base leading-6 text-gray-500">
+            <p className="mt-6 max-w-full text-base leading-6 text-gray-500 md:max-w-sm">
               Розрахуємо вартість і підберемо оптимальну товщину ППУ під ваш
               об&apos;єкт.
             </p>
           </article>
         </div>
 
-        {/* DESKTOP: featured layout */}
         <div className="hidden lg:block">
           <article className="mt-16">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
               <div className="order-1 lg:order-2">
                 <div className="relative w-full overflow-visible">
-                  <div className="absolute left-4 -top-4 z-10 rounded-full bg-[#00a0e3] px-4 py-2 text-sm font-medium text-white shadow-md">
+                  <div className="absolute left-4 -top-4 z-10 rounded-full bg-(--blue) px-4 py-2 text-sm font-medium text-white shadow-md lg:hidden">
                     {featured.date}
                   </div>
 
@@ -186,7 +182,7 @@ export default function Solving() {
               </div>
 
               <div className="order-2 lg:order-1">
-                <div className="mt-6 hidden rounded-full bg-[#00a0e3] px-4 py-2 text-sm font-medium text-white lg:inline-flex">
+                <div className="mt-6 hidden rounded-full bg-(--blue) px-4 py-2 text-sm font-medium text-white lg:inline-flex">
                   {featured.date}
                 </div>
 
@@ -195,30 +191,28 @@ export default function Solving() {
                 </h3>
 
                 <p className="mt-auto pb-5 pt-4 text-base leading-6 text-gray-500">
-                  <span className="font-semibold text-[#00a0e3]">Рішення:</span>{" "}
+                  <span className="font-semibold text-(--blue)">Рішення:</span>{" "}
                   {featured.description}
                 </p>
               </div>
             </div>
           </article>
 
-          {/* GRID */}
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {rest.map((post) => (
               <ProblemCard key={post.id} post={post} />
             ))}
 
-            {/* CTA */}
             <article className="relative flex h-full flex-col items-end justify-end px-8 py-12 text-right">
-              <h3 className="text-2xl font-semibold tracking-tight text-gray-900">
+              <p className="text-2xl font-semibold tracking-tight text-gray-900">
                 <span>Готові утеплити будинок</span>{" "}
                 <br className="hidden sm:block" />
                 <span>без зайвих витрат?</span>
-              </h3>
+              </p>
 
               <a
                 href="#contact"
-                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#00a0e3] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-(--blue) px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
               >
                 Отримати розрахунок
               </a>

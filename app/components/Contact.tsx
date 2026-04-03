@@ -129,7 +129,7 @@ export default function Contact() {
                     aria-describedby={
                       errors.firstName ? "firstName-error" : undefined
                     }
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-(--blue)"
                   />
                   {errors.firstName && (
                     <p
@@ -160,7 +160,7 @@ export default function Contact() {
                     aria-describedby={
                       errors.lastName ? "lastName-error" : undefined
                     }
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-(--blue)"
                   />
                   {errors.lastName && (
                     <p
@@ -191,7 +191,7 @@ export default function Contact() {
                     required
                     aria-invalid={errors.phone ? "true" : "false"}
                     aria-describedby={errors.phone ? "phone-error" : undefined}
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-(--blue)"
                   />
                   {errors.phone && (
                     <p id="phone-error" className="mt-2 text-xs text-red-600">
@@ -218,7 +218,7 @@ export default function Contact() {
                     required
                     aria-invalid={errors.email ? "true" : "false"}
                     aria-describedby={errors.email ? "email-error" : undefined}
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-(--blue)"
                   />
                   {errors.email && (
                     <p id="email-error" className="mt-2 text-xs text-red-600">
@@ -246,7 +246,7 @@ export default function Contact() {
                     aria-describedby={
                       errors.message ? "message-error" : undefined
                     }
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#00a0e3]"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-(--blue)"
                   />
                   {errors.message && (
                     <p id="message-error" className="mt-2 text-xs text-red-600">
@@ -262,7 +262,7 @@ export default function Contact() {
                 type="submit"
                 disabled={status === "sending"}
                 aria-disabled={status === "sending"}
-                className="block w-full rounded-md bg-[#00a0e3] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-[#0c91c9] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3] disabled:cursor-not-allowed disabled:opacity-60"
+                className="block w-full rounded-md bg-(--blue) px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-(--hover-blue) focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-(--hover-blue) disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {status === "sending"
                   ? "Надсилання..."
@@ -292,7 +292,7 @@ export default function Contact() {
               Натискаючи «Надіслати», я погоджуюся з умовами{" "}
               <a
                 href="#"
-                className="whitespace-nowrap font-semibold text-[#00a0e3] underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3]"
+                className="whitespace-nowrap font-semibold text-(--blue) underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-(--hover-blue)"
               >
                 політики конфіденційності
               </a>
@@ -336,14 +336,14 @@ export default function Contact() {
                     <div className="space-y-1">
                       <a
                         href="tel:+380770120077"
-                        className="flex items-center gap-2 text-base font-semibold text-gray-900 transition hover:text-[#00a0e3] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3]"
+                        className="flex items-center gap-2 text-base font-semibold text-gray-900 transition hover:text-(--blue) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--hover-blue)"
                       >
                         <span>+38 077 012 0077</span>
                       </a>
 
                       <a
                         href="mailto:Foamix2025@gmail.com"
-                        className="flex items-center gap-2 text-sm text-gray-600 transition hover:text-[#00a0e3] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3]"
+                        className="flex items-center gap-2 text-sm text-gray-600 transition hover:text-(--hover-blue) focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-(--hover-blue)"
                       >
                         <span className="break-all">Foamix2025@gmail.com</span>
                       </a>

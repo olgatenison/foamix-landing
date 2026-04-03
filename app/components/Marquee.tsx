@@ -13,7 +13,7 @@ function MarqueeItems() {
 
 export default function Marquee() {
   return (
-    <div className="bg-[#00a0e3] text-white uppercase text-sm font-semibold tracking-wide">
+    <div className="bg-(--blue) text-white uppercase text-sm font-semibold tracking-wide">
       <div className="overflow-hidden py-2">
         <div className="flex flex-row gap-6 whitespace-nowrap animate-marquee-scroll">
           <MarqueeItems />

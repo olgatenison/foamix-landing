@@ -22,14 +22,14 @@ export default function InsulationComparison() {
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="md:pt-12 pb-8">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance md:text-center max-w-2xl mx-auto">
-            Чому <span className="text-[#00a0e3]">пінополіуретан</span> зберігає
+            Чому <span className="text-(--blue)">пінополіуретан</span> зберігає
             тепло краще?
           </h2>
         </div>
         <div className="flex justify-center items-end border-b border-gray-200 pb-6 lg:flex-row flex-col gap-10">
-          <h2 className="text-4xl font-semibold tracking-tight text-gray-900 text-balance lg:max-w-[320px] mx-auto">
+          <h3 className="text-4xl font-semibold tracking-tight text-gray-900 text-balance lg:max-w-[320px] mx-auto">
             Порівняння теплопровідності утеплювачів
-          </h2>
+          </h3>
           <p className="mt-8 text-balance text-lg font-medium text-gray-500 max-w-xl mx-auto">
             Низька теплопровідність пінополіуретану робить ППУ одним із
             найефективніших утеплювачів на ринку.{" "}
@@ -73,7 +73,7 @@ export default function InsulationComparison() {
                   const nameColor = !isRowHovered
                     ? "text-gray-300"
                     : isFirst
-                      ? "text-[#00a0e3]"
+                      ? "text-(--blue)"
                       : "text-gray-900";
                   return (
                     <li
@@ -110,7 +110,7 @@ export default function InsulationComparison() {
                     : "opacity-0 -translate-y-1 pointer-events-none",
                 ].join(" ")}
               >
-                <span className="inline-flex w-fit rounded-2xl bg-[#00a0e3] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-lg mb-2">
+                <span className="inline-flex w-fit rounded-2xl bg-(--blue) px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-lg mb-2">
                   Ефективна теплоізоляція
                 </span>
                 <span className="max-w-70 text-center text-sm font-medium text-balance leading-snug text-gray-500">

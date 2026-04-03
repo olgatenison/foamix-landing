@@ -33,7 +33,7 @@ export default function Hero() {
           <div className="mt-10 flex items-center gap-x-6">
             <a
               href="#contact"
-              className="bg-[#00a0e3] px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-[#028fcc] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3] uppercase rounded-full"
+              className="bg-(--blue) px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-(--hover-blue) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue) uppercase rounded-full"
             >
               Отримати прорахунок
             </a>
@@ -63,7 +63,7 @@ export default function Hero() {
     -translate-y-1/2
     z-12
     text-center px-4
-    bg-[#00a0e3]
+    bg-(--blue)
     rounded-full h-40 w-40
     text-white
     flex flex-col justify-center items-center

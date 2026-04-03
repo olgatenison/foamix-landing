@@ -73,14 +73,14 @@ export default function Features() {
       <div className=" px-6 lg:mx-8 py-20">
         <h2 className=" lg:text-6xl font-semibold tracking-tight text-gray-900 text-balance text-center max-w-2xl mx-auto  text-3xl">
           Утеплення пінополіуретаном{" "}
-          <span className="text-[#00a0e3]">це вигідно</span>
+          <span className="text-(--blue)">це вигідно</span>
         </h2>
 
         <div className="mx-auto mt-16 max-w-2xl  lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-10 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
             {secondaryFeatures.map((feature) => (
               <div key={feature.name} className="flex items-start gap-x-4">
-                <div className="shrink-0 size-10 rounded-full bg-[#00a0e3] flex items-center justify-center">
+                <div className="shrink-0 size-10 rounded-full bg-(--blue) flex items-center justify-center">
                   <feature.icon
                     aria-hidden="true"
                     className="size-5 text-white"

@@ -138,9 +138,9 @@ function PpuTable<T extends PpuRow>({
     <section className="mx-auto w-full max-w-7xl px-6">
       <div className="w-full space-y-6 xl:grid xl:grid-cols-[320px_minmax(0,1fr)] xl:gap-10 xl:space-y-0">
         <div className="w-full">
-          <h2 className="text-3xl font-semibold uppercase text-gray-900 hyphens-auto lg:text-xl wrap-break-word text-balance">
+          <h3 className="text-3xl font-semibold uppercase text-gray-900 hyphens-auto lg:text-xl wrap-break-word text-balance">
             {title}
-          </h2>
+          </h3>
           <p className="mt-2 text-sm text-gray-700">{description}</p>
         </div>
 
@@ -251,9 +251,9 @@ export default function PpuTypes() {
   return (
     <div className="space-y-14 overflow-hidden bg-blue-50 py-8 md:py-16 lg:mx-6 lg:rounded-t-[90px]">
       <div className="mx-auto mt-12 max-w-7xl border-b border-gray-200 px-6 pb-6 xl:mt-0">
-        <h2 className="max-w-lg text-5xl font-semibold tracking-tight text-gray-900 text-balance wrap-break-word hyphens-auto">
+        <h3 className="max-w-lg text-5xl font-semibold tracking-tight text-gray-900 text-balance wrap-break-word hyphens-auto">
           Види пінополіуретану
-        </h2>
+        </h3>
 
         <p className="mt-8 max-w-2xl text-lg font-medium text-gray-500 text-balance">
           Пінополіуретан — універсальний тепло- та гідроізоляційний матеріал,

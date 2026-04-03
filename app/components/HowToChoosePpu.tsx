@@ -60,7 +60,7 @@ export default function HowToChoosePpu() {
               <div className="flex items-center ">
                 <a
                   href="#contact"
-                  className="bg-[#00a0e3] px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-[#028fcc] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00a0e3] uppercase rounded-full shrink-0"
+                  className="bg-(--blue) px-5 py-4 text-sm font-semibold text-white shadow-sm hover:bg-(--hover-blue) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue) uppercase rounded-full shrink-0"
                 >
                   Отримати консультацію
                 </a>
