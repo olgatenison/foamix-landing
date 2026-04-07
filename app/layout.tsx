@@ -5,7 +5,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cookies from "./components/Cookies";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -127,7 +127,8 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Cookies />
-        <GoogleAnalytics gaId="G-TF0EX0FR8V" />
+      
+        <GoogleTagManager gtmId="GTM-M9HF74QX" />
       </body>
     </html>
   );
