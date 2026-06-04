@@ -128,7 +128,7 @@ export default function RootLayout({
         <Footer />
         <Cookies />
 
-        <GoogleTagManager gtmId="GTM-MHVG38B3" />
+        <GoogleTagManager gtmId="GTM-MHVG38B3npm " />
       </body>
     </html>
   );
